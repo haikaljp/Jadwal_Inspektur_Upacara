@@ -148,7 +148,12 @@
 
         .pdf-table .col-no {
             width: 50px;
+            min-width: 50px;
             text-align: center;
+            vertical-align: middle;
+            color: #000 !important;
+            font-size: 12px;
+            font-weight: normal;
         }
 
         .pdf-table .col-nama {
@@ -433,6 +438,11 @@
 
                         if (index === 0) {
                             pdfCell.className = "col-no";
+                            pdfCell.textContent = cell.textContent.trim();
+                            pdfCell.style.width = "50px";
+                            pdfCell.style.minWidth = "50px";
+                            pdfCell.style.textAlign = "center";
+                            pdfCell.style.color = "#000";
                         } else if (index === 1) {
                             pdfCell.className = "col-nama";
 
